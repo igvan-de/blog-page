@@ -1,0 +1,203 @@
+.body {
+    background-color: white;
+    /* need to check if smooth scroll works for all components */
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+#about_me_wrapper {
+    width: 50%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    flex-direction: row;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.about_me {
+    flex-direction: column;
+    background-image: url("./1x/blob-haikei.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 550px;
+    width: 550px;
+    margin-top: 30px;
+}
+
+.about_me_content {
+    width: 400px;
+    text-align: center;
+    margin-top: 110px;
+    margin-left: 50px;
+}
+
+.my_img_block {
+    height: 20px;
+}
+
+.my_img {
+    border-radius: 50%;
+    box-shadow: 8px 2px 10px -3px rgba(0,0,0,0.1);
+    height: 200px;
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 120px;
+}
+
+.my_name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+}
+
+.about_me_description {
+    line-height: 1.5;
+    font-size: 17px;
+    margin-left: 140px;
+    width: 450px;
+}
+
+.special_description_space{
+    margin-left: 10px;
+}
+
+.special_description_space_1{
+    margin-left: 30px;
+}
+
+.special_description_space_2{
+    margin-left: 50px;
+}
+
+.my_work {
+    font-weight: bold;
+}
+
+.about_me_work_wrapper {
+    flex-direction: column;
+    height: 100px;
+}
+
+.work_item_link {
+    font-family: Nunito, sans-serif;
+    background-color: #f3fffd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 6px 10px 40px -3px rgba(0,0,0,0.1);
+    display: flex;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.work_item_link:hover {
+    background: rgb(243,255,253);
+    background: linear-gradient(90deg, rgba(243,255,253,1) 0%, rgba(230,251,248,1) 44%, rgba(223,251,247,1) 100%);
+    font-weight: bold;
+    transform: scale(110%);
+}
+
+#work_experience {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.work_experience_container {
+    margin-right: 100px;
+    height: 350px;
+    width: 350px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 20px 3px rgba(0,0,0,0.1);
+    border-radius: 10px;;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+    .work_experience_container h2 {
+        font-weight: bolder;
+        font-family: Nunito, sans-serif;
+        margin-top: 35px;
+    }
+
+    .work_experience_container p {
+        font-weight: lighter;
+        font-family: Nunito, sans-serif;
+        width: 250px;
+        margin-left: 50px;
+    }
+
+    .work_experience_container img {
+        height: 100px;
+        width: 150px;
+        border-radius: 20px;
+    }
+
+.navbar {
+    overflow: hidden;
+  }
+  
+  .navbar a {
+    float: right;
+    font-size: 16px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: right;
+    margin-right: 40px;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    border: none;
+    outline: none;
+    background-color: white;
+    padding: 25px 25px;
+    background-image: url("./1x/icons8-menu-rounded-48.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    transform: scale(70%);
+    /* transform: rotate(90deg); */
+
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: fixed;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    font-family: Nunito, sans-serif;
+    display: flex;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+  }
+  
+  .dropdown-content a:hover {
+    background: rgb(243,255,253);
+    background: linear-gradient(90deg, rgba(243,255,253,1) 0%, rgba(230,251,248,1) 44%, rgba(223,251,247,1) 100%);
+    font-weight: bold;
+    transform: scale(110%);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
