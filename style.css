@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
 body {
-    /* background: rgb(35,253,189); */
     background: linear-gradient(rgba(35,253,189,0.2945553221288515) 0%, rgba(29,253,187,0.07326680672268904) 9%, rgba(179,241,235,0) 100%);    /* need to check if smooth scroll works for all components */
     background-repeat: no-repeat;
     scroll-behavior: smooth;
@@ -17,9 +22,6 @@ header a {
     padding: 0 20px;
     background-color: rgba(35,253,189,0.2945553221288515);
     height: 60px;
-    margin-left: -8px;
-    margin-right: -8px;
-    margin-top: -7px;;
     display: flex;
     justify-content: space-between;
   }
@@ -41,6 +43,10 @@ header a {
     font-size: 14px;
   }
 
+  nav {
+    display: flex;
+  }
+
   ul {
     list-style: none;
     display: flex;
@@ -54,7 +60,7 @@ header a {
   
   ul li {
     padding: 5px;
-    margin-left: 25px;
+    margin-left: 10px;
   }
   
   ul li:hover {
@@ -97,7 +103,6 @@ header a {
     top: 50px;
     right: 25px;
     height: calc(100vh - 50px);
-    /* width: 100%; */
   }
   
   .open .mobile-menu {
@@ -108,31 +113,33 @@ header a {
   }
   
   .mobile-menu li {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
 
 #about_me {
-    margin-bottom: 200px;
+    margin-top: 80px;
 }
 
 #about_me_wrapper {
-    width: 50%;
     display: flex;
-    margin: auto;
-    align-items: center;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 140px;
 }
 
 .about_me {
+    position: relative;
+    display: flex;
     flex-direction: column;
     background-image: url("./images/blob-haikei.png");
     background-position: center;
     background-repeat: no-repeat;
     height: 550px;
     width: 550px;
-    margin-top: 30px;
+    top: 18px;
 }
 
 .about_me_content {
@@ -147,20 +154,26 @@ header a {
 }
 
 .my_img {
+    position: absolute;
     border-radius: 50%;
     box-shadow: 8px 2px 10px -3px rgba(0, 0, 0, 0.1);
     height: 200px;
-    position: absolute;
-    margin-top: -60px;
-    margin-left: 120px;
+    top: 5px;
+    right: -25px;
 }
 
 .my_name {
+    display: flex;
+    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 23px;
+    top: 25px;
 }
 
 .about_me_description {
+    display: flex;
+    position: relative;
+    margin-top: 55px;
     line-height: 1.5;
     font-size: 17px;
     margin-left: 140px;
@@ -185,12 +198,17 @@ header a {
     line-height: 70px;
 }
 
+.below_wrapper {
+    display: none;
+}
+
 .small-arrow {
-    width: 0px;
+    display: flex;
+    position: absolute;
 }
 
 .small-arrow img {
-    margin-left: -240px;
+    margin-left: 240px;
     margin-top: 260px;
     width: 330px;
 }
@@ -200,17 +218,18 @@ header a {
 }
 
 .about_me_work_wrapper {
+    display: flex;
     flex-direction: column;
     height: 100px;
 }
 
 .work_item_link {
-    font-family: Nunito, sans-serif;
+    display: flex;
     background-color: #f3fffd;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 6px 10px 40px -3px rgba(0, 0, 0, 0.1);
-    display: flex;
+    font-family: Nunito, sans-serif;
     color: black;
     text-decoration: none;
     text-transform: uppercase;
@@ -244,6 +263,8 @@ header a {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: inherit;
+    margin-top: 25px;
 }
 
 .work_experience_background_card_1 {
@@ -271,49 +292,56 @@ header a {
 }
 
 .work_experience_card {
-    position: absolute;
-    height: 433px;
-    width: 357px;
+    height: inherit;
+    width: inherit;
     backdrop-filter: blur(2px) saturate(180%);
     -webkit-backdrop-filter: blur(2px) saturate(180%);
     background-color: rgba(166, 172, 190, 0.144);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
     box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.1);
-    align-items: center;
-    justify-content: center;
     text-align: center;
     flex-direction: column;
     line-height: 25px;
+    margin-right: 80px;
+    padding: 35px 50px;
 }
 
-.work_experience_card h2 {
-    font-weight: bolder;
-    font-family: Nunito, sans-serif;
-    margin-top: 35px;
-    color: white;
-}
+    .work_experience_card h2 {
+        font-weight: bolder;
+        font-family: Nunito, sans-serif;
+        color: white;
+    }
 
-.work_experience_card p {
-    font-weight: lighter;
-    font-family: Nunito, sans-serif;
-    width: 250px;
-    margin-left: 50px;
-    color: white;
-}
+    .work_experience_card p {
+        font-weight: lighter;
+        font-family: Nunito, sans-serif;
+        width: 250px;
+        margin-top: 15px;
+        color: white;
+    }
 
-.work_experience_card img {
-    height: 100px;
-    width: 150px;
-    border-radius: 20px;
-}
+    .work_experience_card img {
+        height: 100px;
+        width: 150px;
+        border-radius: 20px;
+        margin-top: 20px;
+    }
 
     .work_experience_card:hover {
         transform: scale(100%);
     }
 
+.small_line {
+    margin-top: 15px;
+    width: 250px;
+    height: 1px;
+    background-color: white;
+}
+
 footer {
     display: block;
+    margin-top: 100px;
 }
 
 #footer_wrapper {
@@ -322,13 +350,70 @@ footer {
     height: 400px;
 }
 
+/* From here the webApp will be displayed for mobiles and devices with smaller screens */
 
 @media only screen and (max-width: 800px) {
     header nav {
-      display: none;
+        display: none;
     }
   
     #hamburger-icon {
-      display: block;
+        display: block;
     }
+
+    #about_me_wrapper {
+        flex-direction: column;
+    }
+
+        .about_me_work_wrapper {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            align-items: center;
+        }
+    
+        .my_img {
+            top: -55px;
+            right: 140px;
+        }
+
+        .work_item_link {
+            margin-top: 0px;
+            margin-left: 20px;
+        }
+
+        .small-arrow {
+            display: none;
+        }
+
+        .below_wrapper {
+            display: flex;
+            margin-top: -20px;
+            margin-left: 150px;
+            font-weight: bold;
+        }
+
+    .work_examples {
+        flex-direction: column;
+    }
+
+
+
   }
+
+@media only screen and (max-width: 1100px) {
+    .work_examples {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work_experience_background_card_1, .work_experience_background_card_2{
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .work_experience_background_card_1, .work_experience_background_card_2{
+        margin-right: 20px;
+    }
+}
