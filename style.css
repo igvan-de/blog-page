@@ -341,14 +341,69 @@ header a {
 
 footer {
     display: block;
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
-#footer_wrapper {
-    background-color: rgba(35,253,189,0.2945553221288515);
-    width: 100%;
-    height: 400px;
-}
+    #footer_wrapper {
+        display: flex;
+        position: relative;
+        background-color: rgba(35,253,189,0.2945553221288515);
+        /* border-top: 3px solid rgba(35, 253, 188, 0.486); Not sure if this looks good? */
+        width: 100%;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+    }
+
+        #contact_me {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            gap: 5px;
+            height: 400px;
+            width: 450px;
+            background-color: white;
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            border-radius: 20px;
+            box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.1);
+            top: -50px;
+            padding: 30px 30px;
+            align-content: center;
+        }
+
+        #socials_wrapper {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+            #socials_wrapper h3 {
+                margin-left: 25px;
+            }
+
+            .big_line {
+                width: 445px;
+                height: 3px;
+                background-color: rgba(35, 253, 188, 0.486);
+                margin-top: 15px;
+                margin-bottom: 15px;
+                margin-left: 25px;
+            }
+
+            #contact_wrapper {
+                display: flex;
+                flex-direction: row;
+                position: relative;
+            }
+
+                #contact_wrapper ul li {
+                    padding: 0px;
+                    margin-left: 25px;
+                }
+
+                #contact_wrapper a {
+                    text-decoration: none;
+                }
 
 /* From here the webApp will be displayed for mobiles and devices with smaller screens */
 
