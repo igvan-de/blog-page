@@ -341,7 +341,7 @@ header a {
 
 footer {
     display: block;
-    margin-top: 200px;
+    margin-top: 300px;
 }
 
     #footer_wrapper {
@@ -360,16 +360,79 @@ footer {
             position: relative;
             flex-direction: column;
             gap: 5px;
-            height: 400px;
+            height: 550px;
             width: 450px;
             background-color: white;
             border: 1px solid rgba(255, 255, 255, 0.125);
             border-radius: 20px;
             box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.1);
-            top: -50px;
+            top: -100px;
             padding: 30px 30px;
             align-content: center;
         }
+
+            #contact_me p {
+                font-weight: lighter;
+            }
+
+            #contact_me span {
+                font-weight: bold;
+            }
+
+            #contact_me hr {
+                border: 1px solid;
+                color: black;
+                margin-top: 5px;
+            }
+
+            .submit_btn {
+                display: flex;
+                position: absolute;
+                background-color: black;
+                background-size: cover;
+                border: none;
+                color: white;
+                font-weight: bold;
+                justify-content: center;
+                width: 100px;
+                right: 30px;
+                bottom: 20px;
+            }
+
+                .submit_btn:hover {
+                    background-image: url('./images/work-experience-background/blurry-gradient-haikei.png');
+                }
+
+            #form_wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                margin-top: 5px;
+            }
+
+                #form_wrapper label {
+                    margin-top: 7px;
+                }
+
+                #form_wrapper input {
+                    display: flex;
+                    padding: 5px;
+                    height: 40px;
+                    border-radius: 10px;
+                    border: 1px solid;
+                    font-family: Nunito, sans-serif;
+                    margin-top: -5px;
+                }
+
+                #form_wrapper textarea {
+                    display: flex;
+                    padding: 10px;
+                    height: 100px;
+                    border-radius: 5px;
+                    border: 1px solid;
+                    font-family: Nunito, sans-serif;
+                    margin-top: -5px;
+                }
 
         #socials_wrapper {
             display: flex;
