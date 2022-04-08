@@ -339,6 +339,67 @@ header a {
     background-color: white;
 }
 
+#documentary {
+    margin-top: 200px;
+}
+
+.work_header {
+    font-weight: bolder;
+    font-size: 45px;
+    font-family: Nunito, sans-serif;
+    margin-right: 80px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.article_wrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    width: 100%;
+    background-color: rgba(223, 223, 223, 0.185);
+}
+
+    .short_documentary {
+        display: flex;
+        position: relative;
+        height: 350px;
+        width: 700px;
+        margin-right: 50px;
+        border-radius: 10px;
+    }
+
+.article_descrtiption {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    padding: 30px;
+    border-radius: 20px;
+    line-height: 25px;
+    font-family: inherit;
+}
+
+    .article_descrtiption h3 {
+        font-weight: bold;
+    }
+
+    .article_descrtiption hr {
+        border: 1px solid;
+        color: black;
+        margin-top: 10px;
+    }
+
+    .article_descrtiption p {
+        font-weight: lighter;
+        margin-top: 10px;
+    }
+
 footer {
     display: block;
     margin-top: 300px;
@@ -360,13 +421,13 @@ footer {
             position: relative;
             flex-direction: column;
             gap: 5px;
-            height: 550px;
+            height: 580px;
             width: 450px;
             background-color: white;
             border: 1px solid rgba(255, 255, 255, 0.125);
             border-radius: 20px;
             box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.1);
-            top: -100px;
+            top: -120px;
             padding: 30px 30px;
             align-content: center;
         }
@@ -421,17 +482,21 @@ footer {
                     border-radius: 10px;
                     border: 1px solid;
                     font-family: Nunito, sans-serif;
-                    margin-top: -5px;
+                    margin-top: -1px;
                 }
+
+                /* #form_wrapper input:required {
+                    border: 1px solid red;
+                } */
 
                 #form_wrapper textarea {
                     display: flex;
                     padding: 10px;
-                    height: 100px;
+                    height: 120px;
                     border-radius: 5px;
                     border: 1px solid;
                     font-family: Nunito, sans-serif;
-                    margin-top: -5px;
+                    margin-top: -1px;
                 }
 
         #socials_wrapper {
