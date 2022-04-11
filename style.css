@@ -16,6 +16,7 @@ body {
 
 header a {
     text-decoration: none;
+    position: relative;
   }
   
   header {
@@ -400,17 +401,137 @@ header a {
         margin-top: 10px;
     }
 
-#triangle-down {
-    position: absolute;
-    width: 0;
-    height: 0;
-    right: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 100px solid rgba(137, 43, 226, 0.082);
-    border-color: linear-gradient(90deg, rgba(231,231,231,0.015865721288515378) 0%, rgba(255,255,255,0.8141850490196079) 84%, rgba(235,233,233,0.9262298669467787) 100%);
+#artwork {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 500px;
+    height: auto;
+    width: auto;
+    justify-content: center;
+}
 
+    .artwork_items {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        gap: 300px;
     }
+
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+
+        .artwork_item {
+            display: flex;
+            flex-direction: row;
+            padding: 30px;
+            border-radius: 20px;
+            height: auto;
+            width: auto;
+            top: 100px;
+            gap: 80px;
+        }
+
+            #portrets {
+                background-color: lightsalmon;
+            }
+
+            #wallpapers {
+                background-color: lightskyblue;
+            }
+
+            #other {
+                background-color: lightyellow;
+            }
+
+            .artwork_description {
+                display: flex;
+                flex-direction: column;
+                width: 360px;
+                align-items: center;
+                text-align: center;
+            }
+
+                .artwork_description h3 {
+                    font-size: 40px;
+                }
+
+                .artwork_description hr {
+                    border: 1px solid;
+                    color: black;
+                    width: 55%;
+                    margin-bottom: 15px;
+                }
+
+                .artwork_description p {
+                    font-size: 15px;
+                }
+
+            #wrapper {
+                display: flex;
+                width: 100%;
+                max-width: 964px;
+                position: relative;
+                align-items: center;
+            }
+                  
+                .carousel {
+                    overflow: auto;
+                    scroll-behavior: smooth;
+                    scrollbar-width: none;
+                }
+                
+                .carousel::-webkit-scrollbar {
+                    height: 0;
+                }
+                
+                .prev,
+                .next {
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    background: white;
+                    border: none;
+                    padding: 8px;
+                    border-radius: 50%;
+                    outline: 0;
+                    cursor: pointer;
+                    position: absolute;
+                }
+            
+                .prev:hover,
+                .next:hover {
+                    background-color: rgba(0, 0, 0, 0.2);
+                }
+                
+                .prev {
+                    top: 50%;
+                    left: 0;
+                    transform: translate(50%, -50%);
+                    display: none;
+                }
+                
+                .next {
+                    top: 50%;
+                    right: 0;
+                    transform: translate(-50%, -50%);
+                }
+                
+                .content {
+                    display: grid;
+                    grid-gap: 40px;
+                    grid-auto-flow: column;
+                    margin: auto;
+                    box-sizing: border-box;
+                }
+                
+                .item {
+                    width: 150px;
+                    height: 150px;
+                }
 
 footer {
     display: block;
