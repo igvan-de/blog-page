@@ -463,13 +463,14 @@ header a {
             height: auto;
             width: auto;
             gap: 80px;
+            top: 30px;
         }
 
             #portrets {
                 background-color: lightsalmon;
             }
 
-            #wallpapers {
+            #moodboards {
                 background-color: lightskyblue;
             }
 
@@ -499,29 +500,68 @@ header a {
                 .artwork_description p {
                     font-size: 15px;
                 }
-                
+
                 .images img {
                     height: 250px;
                     width: 250px;
-                    border-radius: 5px;
+                    border-radius: 15px;
                     box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 15px;
+                    margin-top: 30px;
+                }
+
+                .moodboards__items img {
+                    height: 250px;
+                    width: 350px;
+                    border-radius: 15px;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 15px;
+                    margin-top: 30px;
                 }
                     
                 .review__button {
+                    display: flex;
+                    flex-direction: row;
                     text-align: center;
                     padding: 10px;
                 }
                     
                 .review__button button {
-                    color: rgb(192, 229, 192);
-                    background: green;
-                    font-weight: bold;
+                    font-weight: bolder;
                 }
                     
                 .images {
                     display: none;
                 }
+                
+                .img_one {
+                    display: block;
+                }
 
+                #prev,
+                #next {
+                  justify-content: center;
+                  align-content: center;
+                  background: inherit;
+                  border: none;
+                  padding: 8px;
+                  border-radius: 50%;
+                  outline: 0;
+                  cursor: pointer;
+                }
+
+                    .pointer_img {
+                        height: 25px;
+                        width: 25px;
+                    }
+
+                    .next_rotate {
+                        transform: rotate(180deg);
+                    }
+
+                    #prev:hover,
+                    #next:hover {
+                        background-color: rgba(0, 0, 0, 0.2);
+                    }
+                
 footer {
     display: block;
     margin-top: 300px;

@@ -26,9 +26,12 @@ function carousel(review, className) {
     if (className === "portrets") {
       reviews = document
       .getElementsByClassName("portrets__items");
-    } else if (className === "wallpapers") {
+    } else if (className === "moodboards") {
       reviews = document
-      .getElementsByClassName("wallpapers__items");
+      .getElementsByClassName("moodboards__items");
+    } else if (className === "other") {
+      reviews = document
+      .getElementsByClassName("other__items");
     }
     
     if (review >= reviews.length) {
