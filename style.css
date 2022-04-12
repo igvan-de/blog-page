@@ -340,6 +340,7 @@ header a {
 
 #documentary {
     margin-top: 200px;
+    margin-bottom: 150px;
     background: linear-gradient(90deg, rgba(231,231,231,0.015865721288515378) 0%, rgba(255,255,255,0.8141850490196079) 84%, rgba(235,233,233,0.9262298669467787) 100%);
 }
 
@@ -410,6 +411,42 @@ header a {
     justify-content: center;
 }
 
+    .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+
+    .artwork_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 200px;
+    }
+
+    .artwork_context {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 500px;
+        margin-top: 100px;
+    }
+
+        .artwork_section  {
+            top: 100px;
+        }
+
+            .artwork_header {
+                text-align: left;
+                margin-bottom: 10px;
+                font-size: 70px;
+            }
+
+            .artwork_explenation {
+                font-size: 20px;
+                font-weight: lighter;
+            }
+
     .artwork_items {
         display: flex;
         flex-direction: column;
@@ -418,20 +455,13 @@ header a {
         gap: 300px;
     }
 
-        .sticky {
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-        }
-
         .artwork_item {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             padding: 30px;
             border-radius: 20px;
             height: auto;
             width: auto;
-            top: 100px;
             gap: 80px;
         }
 
@@ -469,68 +499,27 @@ header a {
                 .artwork_description p {
                     font-size: 15px;
                 }
-
-            #wrapper {
-                display: flex;
-                width: 100%;
-                max-width: 964px;
-                position: relative;
-                align-items: center;
-            }
-                  
-                .carousel {
-                    overflow: auto;
-                    scroll-behavior: smooth;
-                    scrollbar-width: none;
-                }
                 
-                .carousel::-webkit-scrollbar {
-                    height: 0;
+                .images img {
+                    height: 250px;
+                    width: 250px;
+                    border-radius: 5px;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 15px;
                 }
-                
-                .prev,
-                .next {
-                    display: flex;
-                    justify-content: center;
-                    align-content: center;
-                    background: white;
-                    border: none;
-                    padding: 8px;
-                    border-radius: 50%;
-                    outline: 0;
-                    cursor: pointer;
-                    position: absolute;
+                    
+                .review__button {
+                    text-align: center;
+                    padding: 10px;
                 }
-            
-                .prev:hover,
-                .next:hover {
-                    background-color: rgba(0, 0, 0, 0.2);
+                    
+                .review__button button {
+                    color: rgb(192, 229, 192);
+                    background: green;
+                    font-weight: bold;
                 }
-                
-                .prev {
-                    top: 50%;
-                    left: 0;
-                    transform: translate(50%, -50%);
+                    
+                .images {
                     display: none;
-                }
-                
-                .next {
-                    top: 50%;
-                    right: 0;
-                    transform: translate(-50%, -50%);
-                }
-                
-                .content {
-                    display: grid;
-                    grid-gap: 40px;
-                    grid-auto-flow: column;
-                    margin: auto;
-                    box-sizing: border-box;
-                }
-                
-                .item {
-                    width: 150px;
-                    height: 150px;
                 }
 
 footer {

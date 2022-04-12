@@ -123,59 +123,102 @@
 		</section>
 
 		<section id="artwork">
-			<div class="art_work_container">
-				<div class="work_header sticky">
-					<h2>Artwork</h2>
-				</div>
+			<div class="artwork_container">
+				<div class="artwork_context">
+					<div class="artwork_section sticky">
+						<div class="work_header artwork_header">
+							<h2>Artwork</h2>
+						</div>
+						<div class="artwork_explenation sticky">
+							<p>During my study I needed to work with Adobe Photoshop. I needed to create different kind of artwork.
+								From portrets to moodboards and other art. Have a look at my work..
+								</p>
+						</div>
+					</div>
+				</div>				
 				<div class="artwork_items">
 					<div class="artwork_item sticky" id="portrets">
 						<div class="artwork_description">
 							<h3>Portrets</h3>
 							<hr>
-							<p>During my study I needed to work with Adobe Photoshop.
-							Very quicly I discoverd that I really enjoyed this and that I liked creating portrets.
-						I made one of myself and soon friends wanted also a portret of themselfes.
-					Please take a look at some of the portrests I made.</p>
-						</div>
-						<div id="wrapper">
-							<div class="carousel" id="carousel-portrets">
-								<div class="content" id="content-portrets">
-									<img class="item" src="images/dshard.jpg">
-									<img class="item" src="images/nis.jpg">
-									<img class="item" src="images/annie.jpg">
-									<img class="item" src="images/suus.jpg">
-									<img class="item" src="images/BABYSHOWERV2.jpg">
-								</div>
+							<p>Very quicly I discoverd that I really enjoyed this and that I liked creating portrets.
+								I made one of myself and soon friends wanted also a portret of themselfes.
+							</p>
+							<div class="images portrets__items">
+								<img src="./images/annie.jpg" />
 							</div>
-							<button class="prev" id="prev-portrets">
-								<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								>
-									<path fill="none" d="M0 0h24v24H0V0z" />
-									<path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
-								</svg>
-							</button>
-							<button class="next" id="next-portrets">
-								<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								>
-									<path fill="none" d="M0 0h24v24H0V0z" />
-									<path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
-								</svg>
-							</button>
+							<div class="images portrets__items">
+								<img src="./images/dshard.jpg" />
+							</div>
+							<div class="images portrets__items">
+								<img src="./images/nis.jpg" />
+							</div> 
+							<div class="images portrets__items">
+								<img src="./images/BABYSHOWERV2.jpg" />
+							</div>  
+							<div class="review__button">
+								<button id="prev" onclick="previousReview('portrets')">
+									PREV
+								</button>
+								<button id="next" onclick="nextReview('portrets')">
+									NEXT
+								</button>
+							</div>
 						</div>
 					</div>
 					<div class="artwork_item sticky" id="wallpapers">
-						<p>test2</p>
+						<div class="artwork_description">
+							<h3>Portrets</h3>
+							<hr>
+							<p>During my study I needed to work with Adobe Photoshop.
+								Very quicly I discoverd that I really enjoyed this and that I liked creating portrets.
+								I made one of myself and soon friends wanted also a portret of themselfes.
+								Please take a look at some of the portrests I made.</p>
+							<div class="images wallpapers__items">
+								<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png" />
+							</div>
+							<div class="images wallpapers__items">
+								<img src="https://media.geeksforgeeks.org/wp-content/uploads/20210101144014/gfglogo.png" />
+							</div>
+							<div class="images wallpapers__items">
+								<img src="https://media.geeksforgeeks.org/img-practice/courses/GfG_Logo.png" />
+							</div>  
+							<div class="review__button">
+								<button id="prev" onclick="previousReview('wallpapers')">
+									PREV
+								</button>
+								<button id="next" onclick="nextReview('wallpapers')">
+									NEXT
+								</button>
+							</div>
+						</div>
 					</div>
 					<div class="artwork_item sticky" id="other">
-						<p>test3</p>
+						<div class="artwork_description">
+							<h3>Portrets</h3>
+							<hr>
+							<p>During my study I needed to work with Adobe Photoshop.
+								Very quicly I discoverd that I really enjoyed this and that I liked creating portrets.
+								I made one of myself and soon friends wanted also a portret of themselfes.
+								Please take a look at some of the portrests I made.</p>
+							<div class="images other__items">
+								<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png" />
+							</div>
+							<div class="images other__items">
+								<img src="https://media.geeksforgeeks.org/wp-content/uploads/20210101144014/gfglogo.png" />
+							</div>
+							<div class="images other__items">
+								<img src="https://media.geeksforgeeks.org/img-practice/courses/GfG_Logo.png" />
+							</div>  
+							<div class="review__button">
+								<button id="prev" onclick="previousReview()">
+									PREV
+								</button>
+								<button id="next" onclick="nextReview()">
+									NEXT
+								</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
