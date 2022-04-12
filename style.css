@@ -141,6 +141,18 @@ header a {
     height: 550px;
     width: 550px;
     top: 18px;
+    animation-duration: 3s;
+    animation-name: slidein-left;
+}
+
+@keyframes slidein-left {
+    from {
+        left: -200px;
+    }
+
+    to {
+        left: 0px;
+    }
 }
 
 .about_me_content {
@@ -161,6 +173,18 @@ header a {
     height: 200px;
     top: 5px;
     right: -25px;
+    animation-duration: 3s;
+    animation-name: slidein-top;
+}
+
+@keyframes slidein-top {
+    from {
+        top: -100px;
+    }
+
+    to {
+        top: 5px;
+    }
 }
 
 .my_name {
@@ -212,6 +236,18 @@ header a {
     margin-left: 240px;
     margin-top: 260px;
     width: 330px;
+    animation-duration: 3s;
+    animation-name: slidein-bottom;
+}
+
+@keyframes slidein-bottom {
+    from {
+        margin-top: 400px;
+    }
+
+    to {
+        margin-top: 260px;
+    }
 }
 
 .my_work {
@@ -237,12 +273,60 @@ header a {
     margin-top: 20px;
 }
 
-.work_item_link:hover {
-    background: rgb(243, 255, 253);
-    background: linear-gradient(90deg, rgba(243, 255, 253, 1) 0%, rgba(230, 251, 248, 1) 44%, rgba(223, 251, 247, 1) 100%);
-    font-weight: bold;
-    transform: scale(110%);
-}
+    .work_item_link:hover {
+        background: rgb(243, 255, 253);
+        background: linear-gradient(90deg, rgba(243, 255, 253, 1) 0%, rgba(230, 251, 248, 1) 44%, rgba(223, 251, 247, 1) 100%);
+        font-weight: bold;
+        transform: scale(110%);
+    }
+
+    .slow {
+        position: relative;
+        animation-duration: 4s;
+        animation-name: slidein-slow;
+    }
+
+    @keyframes slidein-slow {
+        from {
+            right: -100px;
+        }
+    
+        to {
+            right: 0px;
+        }
+    }
+
+    .normal {
+        position: relative;
+        animation-duration: 3s;
+        animation-name: slidein-normal;
+    }
+
+    @keyframes slidein-normal {
+        from {
+            right: -100px;
+        }
+    
+        to {
+            right: 0px;
+        }
+    }
+
+    .fast {
+        position: relative;
+        animation-duration: 2s;
+        animation-name: slidein-fast;
+    }
+
+    @keyframes slidein-fast {
+        from {
+            right: -100px;
+        }
+    
+        to {
+            right: 0px;
+        }
+    }
 
 #work_experience {
     display: flex;
