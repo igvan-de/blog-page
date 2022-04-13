@@ -354,8 +354,8 @@ header a {
 
 .work_experience_background_card_1 {
     position: relative;
-    background-color: #5a61bd;
-    background-image: linear-gradient(28deg, #5a61bd 0%, #91c4f9 42%, #ffffff 100%);
+    background-color: #ffffff;
+    background-image: linear-gradient(235deg, #f2f2f2cf 0%, #ffffffcc 42%, #ffffffd4 100%);
     filter: drop-shadow(0 0 0.75rem rgba(49, 53, 51, 0.568));
     height: 433px;
     width: 357px;
@@ -364,8 +364,8 @@ header a {
 
 .work_experience_background_card_2 {
     position: relative;
-    background-color: #5a61bd;
-    background-image: linear-gradient(27deg, #5a61bd 0%, #91c4f9 42%, #ffffff 100%);
+    background-color: #ffffff;
+    background-image: linear-gradient(28deg, #f2f2f2cf 0%, #ffffffcc 42%, #ffffffd4 100%);
     /* background-image: url('./images/work-experience-background/blurry-gradient-haikei_2.png');
     background-size: cover;
     background-repeat: no-repeat; */
@@ -380,7 +380,6 @@ header a {
     width: inherit;
     backdrop-filter: blur(2px) saturate(180%);
     -webkit-backdrop-filter: blur(2px) saturate(180%);
-    background-color: rgba(166, 172, 190, 0.144);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
     box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.1);
@@ -423,9 +422,11 @@ header a {
 }
 
 #documentary {
+    padding: 50px;
     margin-top: 200px;
     margin-bottom: 150px;
-    background: linear-gradient(90deg, rgba(231,231,231,0.015865721288515378) 0%, rgba(255,255,255,0.8141850490196079) 84%, rgba(235,233,233,0.9262298669467787) 100%);
+    background: linear-gradient(90deg, rgba(231,231,231,0.015865721288515378) 0%, rgb(117 244 193 / 6%) 84%, rgb(168 253 234 / 64%) 100%);
+    /* background: linear-gradient(90deg, rgba(231,231,231,0.015865721288515378) 0%, rgba(255,255,255,0.8141850490196079) 84%, rgba(235,233,233,0.9262298669467787) 100%); */
 }
 
 .work_header {
@@ -489,7 +490,6 @@ header a {
 #artwork {
     display: flex;
     margin-top: 50px;
-    margin-bottom: 500px;
     height: auto;
     width: auto;
     justify-content: center;
@@ -544,8 +544,9 @@ header a {
             flex-direction: column;
             padding: 30px;
             border-radius: 20px;
-            height: auto;
+            min-height: 620px;
             width: auto;
+            justify-content: center;
             gap: 80px;
             top: 30px;
         }
@@ -643,9 +644,25 @@ header a {
 
                     #prev:hover,
                     #next:hover {
-                        background-color: rgba(0, 0, 0, 0.2);
+                        transform: scale(150%);
                     }
                 
+#radio {
+    padding: 50px;
+    margin-top: 200px;
+    margin-bottom: 150px;
+    background: linear-gradient(270deg, rgba(231,231,231,0.015865721288515378) 0%, rgb(117 244 193 / 6%) 84%, rgb(168 253 234 / 64%) 100%);
+}
+
+    .video_radio {
+        display: flex;
+        position: relative;
+        height: 400px;
+        border-radius: 20px;
+        margin-left: 50px;
+    }
+
+                    
 footer {
     display: block;
     margin-top: 300px;
@@ -838,18 +855,37 @@ footer {
         margin-top: 50px;
     }
 
+    #documentary {
+        margin-bottom: 0px;
+    }
+
     .article_wrapper {
         flex-direction: column;
         height: auto;
         gap: 50px;
     }
     
+    .artwork_container {
+        flex-direction: column;
+    }
+
+    .artwork_context {
+        margin-top: 0px;
+    }
+
+    .artwork_items {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .sticky {
+        position: relative;
+    }
+
 }
 
 @media only screen and (max-width: 1200px) {
     .work_experience_background_card_1, .work_experience_background_card_2{
         margin-right: 20px;
     }
-
-    
 }
