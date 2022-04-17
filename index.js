@@ -49,10 +49,33 @@ function carousel(review, className) {
 }
 
 
+var form = document.getElementById("form_wrapper");
+function handleForm(event) { event.preventDefault(); } 
+form.addEventListener('submit', handleForm);
+
+function formCheck() {
+
+  const firsttName = document.getElementById("firstName");
+  const surname = document.getElementById("surname");
+  const email = document.getElementById("email");
+  const comment = document.getElementById("comment");
 
 
-function formCheck(form) {
-  console.log('form' , form);
+    function elementChecker(element) {
+      if (element.value.length <= 0) {
+        element.classList.add("required");
+        document.getElementById("warning").style.display = "inline";
+      } else if (element.value.length > 0) {
+        element.classList.remove("required");
+        document.getElementById("warning").style.display = "none";
+      }
+    }
+
+    elementChecker(firsttName);
+    elementChecker(surname);
+    elementChecker(email);
+    elementChecker(comment);
+
 }
 
 // let nameEl = document.getElementById("nameId");

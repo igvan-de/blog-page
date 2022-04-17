@@ -14,18 +14,18 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-header a {
-    text-decoration: none;
-    position: relative;
-  }
-  
-  header {
+header {
+    display: flex;
     padding: 0 20px;
     background-color: rgba(35,253,189,0.2945553221288515);
     height: 60px;
-    display: flex;
     justify-content: space-between;
   }
+
+  header a {
+        text-decoration: none;
+        position: relative;
+    }
   
   #brand {
     font-weight: bold;
@@ -410,8 +410,19 @@ header a {
         margin-top: 20px;
     }
 
-    .work_experience_card:hover {
-        transform: scale(100%);
+    #cards:hover {
+        animation-duration: 2s;
+        animation-name: wiggle;
+    }
+
+    @keyframes wiggle {
+        from {
+            transform: rotateZ(0.5deg) scale(105%);
+        }
+
+        to {
+            transform: rotateZ(-0.1deg);
+        }
     }
 
 .small_line {
@@ -668,13 +679,17 @@ footer {
     margin-top: 300px;
 }
 
+input {
+    border: 1px solid;
+}
+
     #footer_wrapper {
         display: flex;
         position: relative;
         background-color: rgba(35,253,189,0.2945553221288515);
-        /* border-top: 3px solid rgba(35, 253, 188, 0.486); Not sure if this looks good? */
         width: 100%;
-        height: 400px;
+        min-height: 400px;
+        height: auto;
         justify-content: center;
         align-items: center;
     }
@@ -684,7 +699,8 @@ footer {
             position: relative;
             flex-direction: column;
             gap: 5px;
-            height: 580px;
+            min-height: 580px;
+            height: auto;
             width: 450px;
             background-color: white;
             border: 1px solid rgba(255, 255, 255, 0.125);
@@ -709,9 +725,15 @@ footer {
                 margin-top: 5px;
             }
 
+            #btn {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 10px;
+            }
+
             .submit_btn {
                 display: flex;
-                position: absolute;
+                position: relative;
                 background-color: black;
                 background-size: cover;
                 border: none;
@@ -719,8 +741,6 @@ footer {
                 font-weight: bold;
                 justify-content: center;
                 width: 100px;
-                right: 30px;
-                bottom: 20px;
             }
 
                 .submit_btn:hover {
@@ -738,28 +758,32 @@ footer {
                     margin-top: 7px;
                 }
 
+                #warning {
+                    display: none;
+                    height: 20px;
+                    margin-left: 5px;
+                }
+
                 #form_wrapper input {
                     display: flex;
                     padding: 5px;
                     height: 40px;
                     border-radius: 10px;
-                    border: 1px solid;
                     font-family: Nunito, sans-serif;
                     margin-top: -1px;
                 }
-
-                /* #form_wrapper input:required {
-                    border: 1px solid red;
-                } */
 
                 #form_wrapper textarea {
                     display: flex;
                     padding: 10px;
                     height: 120px;
                     border-radius: 5px;
-                    border: 1px solid;
                     font-family: Nunito, sans-serif;
                     margin-top: -1px;
+                }
+
+                .required {
+                    border: 2px solid red;
                 }
 
         #socials_wrapper {
