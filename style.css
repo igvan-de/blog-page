@@ -737,10 +737,13 @@ input {
                 background-color: black;
                 background-size: cover;
                 border: none;
+                border-radius: 20px;
                 color: white;
                 font-weight: bold;
                 justify-content: center;
+                align-items: center;
                 width: 100px;
+                height: 30px;
             }
 
                 .submit_btn:hover {
@@ -758,16 +761,27 @@ input {
                     margin-top: 7px;
                 }
 
-                #warning {
+                .no_show {
                     display: none;
-                    height: 20px;
+                }
+
+                .warning_text {
+                    display: inline;
+                    font-size: 10px;
+                    font-weight: lighter;
+                    color: red;
                     margin-left: 5px;
                 }
 
                 #form_wrapper input {
                     display: flex;
+
+                    -webkit-appearance: none;
+                    appearance: none;
+
                     padding: 5px;
                     height: 40px;
+                    width: 100%;
                     border-radius: 10px;
                     font-family: Nunito, sans-serif;
                     margin-top: -1px;
@@ -777,6 +791,7 @@ input {
                     display: flex;
                     padding: 10px;
                     height: 120px;
+                    width: 100%;
                     border-radius: 5px;
                     font-family: Nunito, sans-serif;
                     margin-top: -1px;
@@ -867,6 +882,15 @@ input {
         flex-direction: column;
     }
     
+    #footer_wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #socials_wrapper {
+        margin-bottom: 100px;
+    }
+
   }
 
 @media only screen and (max-width: 1100px) {

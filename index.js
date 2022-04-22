@@ -5,6 +5,7 @@ function toggleMobileMenu(menu) {
 // function to check if required fields in form are correct and filled in
 // in not then show which ones are required
 
+// -- COAROUSEL --
 let rev = 0;
 let className = '';
 // carousel(rev, className);
@@ -49,38 +50,34 @@ function carousel(review, className) {
 }
 
 
+// -- FORM --
 var form = document.getElementById("form_wrapper");
 function handleForm(event) { event.preventDefault(); } 
 form.addEventListener('submit', handleForm);
 
 function formCheck() {
 
+  // all reqeuired ids of form field
   const firsttName = document.getElementById("firstName");
   const surname = document.getElementById("surname");
   const email = document.getElementById("email");
   const comment = document.getElementById("comment");
+  let allIds = [firsttName, surname, email, comment];
 
+  // all error messages
+  const warning = document.getElementsByClassName("warning");
 
-    function elementChecker(element) {
-      if (element.value.length <= 0) {
+    function elementChecker(element, i) {
+      if (element.value.length <= 0 || element.id == 'email' && element.validity.typeMismatch) {
         element.classList.add("required");
-        document.getElementById("warning").style.display = "inline";
+        warning[i].classList.add("warning_text");
       } else if (element.value.length > 0) {
         element.classList.remove("required");
-        document.getElementById("warning").style.display = "none";
+        warning[i].classList.remove("warning_text");
       }
     }
 
-    elementChecker(firsttName);
-    elementChecker(surname);
-    elementChecker(email);
-    elementChecker(comment);
-
+    for(let i = 0; i < allIds.length; i++) {
+      elementChecker(allIds[i], i);
+    }
 }
-
-// let nameEl = document.getElementById("nameId");
-// let surnameEl = ;
-// let meilEl = ;
-// let 
-
-// nameEl.setAttribute("required", true);

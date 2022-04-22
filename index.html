@@ -258,17 +258,29 @@
 					<h3>Interested in working toghter?</h3>
 					<p>Call me on <span>0612345678</span> or fill in the form:</p>
 					<hr>
-					<form id="form_wrapper">
-						<label>First Name</label>
-						<input id="firstName" type="text" placeholder="Your first name.." oninvalid="" required>
-						<label>Surname<img src="images/exclamation-mark.png" id="warning"></label>
-						<input id="surname" type="text" placeholder="Your surname.." required>
-						<label>Email</label>
-						<input id="email" type="email" placeholder="Your email.." required>
-						<label>Question</label>
-						<textarea id="comment" type="comment" placeholder="Fill in your question.." required></textarea>
+					<form id="form_wrapper" novalidate>
+						<label>
+							First Name
+							<span class="no_show warning" aria-live="polite">please enter your first name</span>	
+							<input type="text" id="firstName" placeholder="Your first name.." oninvalid="" required>
+						</label>
+						<label>
+							Surname
+							<span class="no_show warning" aria-live="polite">please enter your surname</span>
+							<input type="text" id="surname" placeholder="Your surname.." required>
+						</label>
+						<label for="mail">
+							Email
+							<span class="no_show warning" aria-live="polite">please enter your email</span>
+							<input type="email" id="email" name="mail" placeholder="Your email.." required>
+						</label>
+						<label>
+							Question
+							<span class="no_show warning">please enter your quetion(s)</span>
+							<textarea type="comment" id="comment" placeholder="Fill in your question.." required></textarea>
+						</label>
 						<div id="btn">
-							<input class="submit_btn" type="submit" value="Submit" onclick="formCheck()">
+							<button class="submit_btn" onclick="formCheck()">Submit</button>
 						</div>
 					</form>
 				</div>
