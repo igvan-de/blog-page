@@ -258,7 +258,7 @@
 					<h3>Interested in working toghter?</h3>
 					<p>Call me on <span>0612345678</span> or fill in the form:</p>
 					<hr>
-					<form id="form_wrapper" novalidate>
+					<form method="POST" id="form_wrapper" novalidate>
 						<label>
 							First Name
 							<span class="no_show warning" aria-live="polite">please enter your first name</span>	
@@ -280,7 +280,7 @@
 							<textarea type="comment" id="comment" placeholder="Fill in your question.." required></textarea>
 						</label>
 						<div id="btn">
-							<button class="submit_btn" onclick="formCheck()">Submit</button>
+							<button class="submit_btn" value="Sent Mail" onclick="formCheck()">Submit</button>
 						</div>
 					</form>
 				</div>
